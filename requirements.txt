@@ -1,0 +1,6 @@
+streamlit
+ifcopenshell
+fpdf
+matplotlib
+google-generativeai
+numpy
