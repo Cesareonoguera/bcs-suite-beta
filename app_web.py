@@ -80,6 +80,16 @@ st.write("### 📂 Carga de Modelo BIM (IFC)")
 # Clave única para detectar cambios de archivo
 uploaded_file = st.file_uploader("Arrastra tu archivo .ifc aquí", type=["ifc"], key="uploader")
 
+st.markdown("""
+    <div style="background-color: #f0f2f6; padding: 10px; border-radius: 5px; font-size: 0.85em; color: #555;">
+        🔒 <strong>Privacidad y Seguridad:</strong> 
+        Sus archivos se procesan en un entorno seguro y volátil. 
+        <br>Por política de confidencialidad, <strong>el modelo IFC original y los resultados se eliminan permanentemente</strong> de nuestros servidores en cuanto cierra esta sesión o recarga la página. 
+        BIM Consulting Solutions no conserva copias de su propiedad intelectual.
+    </div>
+    <br>
+""", unsafe_allow_html=True)
+
 # Si el usuario cambia el archivo, reseteamos la memoria
 if uploaded_file and 'ultimo_archivo' not in st.session_state:
     st.session_state.ultimo_archivo = uploaded_file.name
